@@ -1,5 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import Nav from "@/components/Nav";
+import AirportServices from "@/components/AirportServices";
 
 export default function Home() {
   const placeholders = [
@@ -28,6 +30,9 @@ export default function Home() {
 
   return (
     <main>
+      
+      <Nav/>
+
       <section className="mt-5 flex flex-col items-center">
         <div className="relative md:hidden">
           <input
@@ -36,15 +41,10 @@ export default function Home() {
             placeholder={placeholders[currentPlaceholderIndex]}
           />
         </div>
-
-        <div className="flex  space-x-4 mt-5 overscroll-auto">
-      <div className="w-50 h-16 p-4 rounded-lg ml-4 bg-gray-200 ">Hiiii9iiiiii</div>
-      <div className="w-30 h-16 p-4  rounded-lg bg-gray-200">Heel</div>
-      <div className="w-1/2 h-16 p-4 rounded-lg bg-gray-200">ddddd</div>
-      <div className="w-1/2 h-16 p-4 rounded-lg bg-gray-200">dddddddd</div>
-      <div className="w-1/2 h-16 p-4 rounded-lg bg-gray-200">ddddddd</div>
-    </div>
       </section>
+
+      <AirportServices/>
+      
     </main>
   );
 }
